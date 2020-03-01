@@ -18,7 +18,7 @@ const updateController = async (req, res) => {
         })
     } catch(e) {
         res.json({
-            status: 500,
+            status: 400,
             message: "An error has occur",
             error: e
         })
