@@ -21,7 +21,7 @@ const ShopGrid = () => {
   useEffect(() => {
     getItemsAndDispatch();
   }, [getItemsAndDispatch]);
-  return <Grid>{displayItems}</Grid>;
+  return <Grid>{store.items.length ? displayItems : <h2>No Content</h2>}</Grid>;
 };
 
 export default ShopGrid;

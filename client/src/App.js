@@ -4,6 +4,7 @@ import ShopGrid from "./views/ShopGrid";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import { MainContainer } from "./AppStyles";
 
@@ -13,7 +14,9 @@ function App() {
       <Modal />
       <Navbar />
       <MainContainer>
-        <ShopGrid />
+        <ErrorBoundary>
+          <ShopGrid />
+        </ErrorBoundary>
       </MainContainer>
       <Footer />
     </ItemCtx>
